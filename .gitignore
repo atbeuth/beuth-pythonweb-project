@@ -1,5 +1,14 @@
 # macOS
 .DS_Store
 
+#IntelliJ
+.idea
+
 # Environment
 venv/
+
+# Python
+__pycache__
+
+#logfiles
+*.log

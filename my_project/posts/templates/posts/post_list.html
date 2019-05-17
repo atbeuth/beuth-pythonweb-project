@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+{% extends "home.html" %}
+{% block title %}All Posts{% endblock title %}
+{% block content %}
+<h1>All Posts</h1>
+<table>
+ <tr class="post_header">
+ <th>ID</th>
+ <th>IMAGE_URL</th>
+<!-- <th>Last Name</th>-->
+ <th>Content</th>
+ <th>Timestamp</th>
+ <th>Upvotes</th>
+ <th>Downvotes</th>
+ </tr>
+    {% for post in all_posts %}
+ <tr class="post_row">
+ <td><a href="show/{{ post.id }}">{{ post.id }}</a></td>
+<!-- <td>{{ post.firstname }}</td>
+ <td>{{ post.lastname }}</td>-->
+     <td>{{ post.image_url }}</td>
+     <td><img src="/../{{ post.image_url }}" alt="TestBild" height="42" width="42"></td>
+ <td>{{ post.content }}</td>
+ <td>{{ post.timestamp }}</td>
+ <td>{{ post.upvotes}}</td>
+ <td>{{ post.downvotes}}</td>
+ </tr>
+ {% endfor %}
+</table>
+{% endblock content %}
+
+</body>
+</html>
