@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    background: black;
+}
+
+/* Posts -------------------------------------------------- */
+
+.post {
+    border: solid 1px rgb(43, 43, 43);
+    border-radius: 0.3em;
+    margin: 2%;
+    overflow:hidden;
+}
+
+/* Content */
+
+.pcontent {
+    background: rgb(26, 26, 26);
+    padding: 3%;
+    overflow:hidden;
+}
+
+.pcontent img{
+    float: right;
+    border: solid .7px white;
+    border-radius: 0.3em;
+    bottom: 10em;
+    height: auto;
+    width: 25%;
+    margin: 0 4%;
+}
+
+.pcontent h3, h4, .date{
+    display: inline;
+    left: 0;
+}
+
+.pcontent h4 {
+    color: rgb(0, 179, 255);
+    font-weight: 100;
+}
+
+.pcontent .date {
+    padding-left: 1em;
+    color: grey;
+    font-weight: 100;
+}
+
+.pcontent .content {
+    margin: 1em 0 1em 0;
+    color: rgb(0, 194, 0);
+    display: block;
+}
+
+/* Menu / interaction */
+
+.post .pmenu {
+    width: 100%;
+    border: solid 1px rgb(43, 43, 43); 
+    background-color: rgb(19, 19, 19);
+    bottom: 0;
+    padding: 1.4% 3% 1%;
+}
+
+.pmenu  .vote {
+    bottom: 0;
+    display: inline;
+    padding: .5% 3% .3% 3%;
+    background: rgb(26, 26, 26);
+    border: solid 1px rgb(43, 43, 43);
+    border-radius: 0.3em;
+}
+
+.vote img {
+    height: .8em;
+}
+
+.pmenu  .vote:first-of-type:hover {
+    background-color: rgb(0, 255, 0);
+    color: black;
+}
+
+.pmenu  .vote:last-of-type:hover {
+    background-color: rgb(255, 0, 0);
+    color: black;
+}
+.pmenu  .vote:hover img {
+    filter: invert(1);
+}
+
+.pmenu  .vote:last-of-type img {
+    transform: rotate(180deg);
+}
