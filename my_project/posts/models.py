@@ -7,6 +7,7 @@ class Post(models.Model):
     #lastname = models.TextField(max_length=50)
     image_url = models.ImageField(upload_to ='media/', default = 'media/no-img.jpg')
     content = models.TextField(max_length=1000)
+    tags = models.TextField(max_length=200)
     timestamp = models.DateTimeField(auto_now=True)
     upvotes = models.IntegerField()
     downvotes = models.IntegerField()
