@@ -14,7 +14,7 @@
     <div class="pcontent">
         <h3>Post-ID: {{ post.id }}</h3>
         <p class="date">Puplished on: {{ post.timestamp }}</p><br>
-        <h4>Tags: tag1, tag2, tag3</h4><br>
+        <h4>Tags: {{ post.tags }}</h4><br>
         <img src="/../{{ post.image_url }}" alt="TestBild"  width="100">
         <p class="content">{{ post.content }}</p>
     </div>

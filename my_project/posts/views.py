@@ -26,7 +26,7 @@ def add_post(request):
     if request.method == 'POST':
         form = PostForm(request.POST)
         if form.is_valid():
-            form.save()
+                form.save()
     else:
         form = PostForm()
     return render(request, 'posts/post_add.html', {'form': form})

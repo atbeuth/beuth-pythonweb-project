@@ -3,14 +3,12 @@ from django.db import models
 
 # Create your models here.
 class Post(models.Model):
-    #firstname = models.TextField(max_length=50)
-    #lastname = models.TextField(max_length=50)
-    image_url = models.ImageField(upload_to ='media/', default = 'media/no-img.jpg')
+    image_url = models.ImageField(upload_to ='media/', default = 'media/no_pic.png')
     content = models.TextField(max_length=1000)
     tags = models.TextField(max_length=200)
     timestamp = models.DateTimeField(auto_now=True)
-    upvotes = models.IntegerField()
-    downvotes = models.IntegerField()
+    upvotes = models.IntegerField(default = 0)
+    downvotes = models.IntegerField(default = 0)
 
 
     def summary(self):
