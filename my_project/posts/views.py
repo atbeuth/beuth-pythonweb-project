@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 from .models import Post
+from .forms import PostForm
 # Create your views here.
 
 class PostListView(ListView):
@@ -21,3 +22,11 @@ class PostDetailView(DetailView):
 self).get_context_data(**kwargs)
         context['post_list'] = Post.objects.all()
         return context
+def add_post(request):
+    if request.method == 'POST':
+        form = PostForm(request.POST)
+        if form.is_valid():
+            form.save()
+    else:
+        form = PostForm()
+    return render(request, 'posts/post_add.html', {'form': form})
