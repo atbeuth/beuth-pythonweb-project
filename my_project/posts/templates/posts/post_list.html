@@ -6,9 +6,8 @@
 {% block content %}
 <h1>All Posts</h1>
 <link href="{% static 'css/style.css'%}" rel="stylesheet" type="text/css">
-
+<div id="posts">
 {% for post in all_posts %}
-
 
 <div class="post">
     <div class="pcontent">
@@ -24,7 +23,7 @@
     </div>
 </div>
 
-
 {% endfor %}
+</div>
 </table>
 {% endblock content %}

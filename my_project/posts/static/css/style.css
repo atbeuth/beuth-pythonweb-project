@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    color: white;
 }
 
 body {
@@ -10,7 +9,12 @@ body {
 
 /* Posts -------------------------------------------------- */
 
+#posts {
+    transform: scaleY(-1);
+}
+
 .post {
+    transform: scaleY(-1);
     border: solid 1px rgb(43, 43, 43);
     border-radius: 0.3em;
     margin: 2%;

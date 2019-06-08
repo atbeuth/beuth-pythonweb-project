@@ -3,8 +3,22 @@
 <head>
   <meta charset="utf-8">
   <title>{% block title %}Django Auth Tutorial{% endblock %}</title>
+  {% load static %}
+  <link href="{% static 'css/main_nav.css'%}" rel="stylesheet" type="text/css">
 </head>
 <body>
+  {% block nav %}
+        <ul id="main_nav">
+          <li>{% block nav-logo %}<a href="{% url 'all-posts' %}">LOGO</a>{% endblock %}</li>
+          <li>{% block nav-posts %}<a href="{% url 'all-posts' %}">what is going on in the world</a>{% endblock %}</li>
+          {% if user.is_authenticated %}
+            <li><a href="{% url 'post-add' %}">upload something</a></li>
+            <li><a href="{% url 'home' %}">{{ user.username }}</a></li>
+            {% else %}
+            <a href="{% url 'login' %}">login/sign up</a>
+            {% endif %}
+        </ul>
+  {% endblock %}
   <main>
     {% block content %}
     {% endblock %}
