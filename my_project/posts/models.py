@@ -1,9 +1,9 @@
 from django.db import models
 
-
 # Create your models here.
 class Post(models.Model):
-    image_url = models.ImageField(upload_to ='media/', default = 'media/no_pic.png')
+    #image_url = models.ImageField(upload_to ='media/', default = 'media/assets/no_pic.png')
+    image_url = models.ImageField(upload_to ='media/')
     content = models.TextField(max_length=1000)
     tags = models.TextField(max_length=200)
     timestamp = models.DateTimeField(auto_now=True)
@@ -15,5 +15,4 @@ class Post(models.Model):
         return self.content + ': ' + self.content
 
     def __str__(self):
-        return self.content + ' +' + str(self.upvotes)
-        + ' -' + str(self.downvotes)
+        return self.content + ' +' + str(self.upvotes) + ' -' + str(self.downvotes)

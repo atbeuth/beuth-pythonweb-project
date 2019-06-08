@@ -1,9 +1,12 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 from .models import Post
-from .forms import PostForm
-# Create your views here.
 
+from django.http import HttpResponse 
+from django.shortcuts import render, redirect 
+from .forms import *
+
+# Create your views here.
 class PostListView(ListView):
     model = Post
     context_object_name = "all_posts"
@@ -13,7 +16,6 @@ self).get_context_data(**kwargs)
         context['post_list'] = Post.objects.all()
         return context
 
-# Create your views here.
 class PostDetailView(DetailView):
     model = Post
     context_object_name = "post"
@@ -24,9 +26,14 @@ self).get_context_data(**kwargs)
         return context
 def add_post(request):
     if request.method == 'POST':
-        form = PostForm(request.POST)
+        form = PostForm(request.POST, request.FILES)
         if form.is_valid():
                 form.save()
+                return redirect('success') 
     else:
         form = PostForm()
     return render(request, 'posts/post_add.html', {'form': form})
+
+def success(request): 
+    return HttpResponse('successfuly uploaded') 
+    print("Success")
