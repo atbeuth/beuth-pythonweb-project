@@ -5,14 +5,16 @@
 
 {% block title %}All Posts{% endblock title %}
 {% block content %}
-<h1>All Posts</h1>
+
 <link href="{% static 'css/style.css'%}" rel="stylesheet" type="text/css">
 <script src="{% static "js/filter_posts.js" %}"></script>
 
-<form>
-  Search for tags: <input id="input_search" type="text" name="fname"><br>
-  <input id="submit" type="submit" value="Submit">
+<form id="search_nav">
+  <input id="input_search" type="text" name="fname">
+  <input id="submit" type="submit" value="search">
 </form> 
+
+<h1>All Posts</h1>
 
 <div id="posts">
 {% for post in all_posts %}
