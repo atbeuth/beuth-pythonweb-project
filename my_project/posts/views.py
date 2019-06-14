@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
-from .models import Post
+from .models import *
+
 
 from django.http import HttpResponse 
 from django.shortcuts import render, redirect 
@@ -37,3 +38,7 @@ def add_post(request):
 def success(request): 
     return HttpResponse('successfuly uploaded') 
     print("Success")
+    
+def filter_list(request):
+    f = frontFilter(request.GET, queryset=filter.objects.all())
+    return render(request, 'posts/filter.html', {'filter': f})
