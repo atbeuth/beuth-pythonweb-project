@@ -1,0 +1,31 @@
+@import variables
+    
+// border
+@mixin border-default
+    border: solid 1px $color-border
+    border-radius: 0.3em
+@mixin border-round
+    border-radius: 0.3em
+@mixin border-nav-top
+    border-top: solid 0.1px white
+
+// buttons
+@mixin button-default
+    padding: 4px
+    margin-top: 2%
+    background-color: $color-main-green
+    border: none
+    border-radius: 10em
+    color: white
+    padding: 5px, 4px
+    text-align: center
+    text-decoration: none
+    display: inline-block
+    font-size: 16px
+
+@mixin image-invert
+    filter: invert(1)
+
+// hacks
+@mixin turn
+    transform: scaleY(-1)

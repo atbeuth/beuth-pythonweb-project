@@ -6,13 +6,15 @@
 {% block title %}All Posts{% endblock title %}
 {% block content %}
 
-<link href="{% static 'css/style.css'%}" rel="stylesheet" type="text/css">
+<link href="{% static 'css/posts.css'%}" rel="stylesheet" type="text/css">
 <script src="{% static "js/filter_posts.js" %}"></script>
 
 <form id="search_nav">
+<div id="search-field" >
   <input id="input_search" type="text" name="fname">
   <input id="submit" type="submit" value="search">
-</form> 
+  </div>
+</form>
 
 <h1>All Posts</h1>
 

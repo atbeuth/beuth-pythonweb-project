@@ -1,0 +1,145 @@
+@import variables
+@import mixins
+
+* 
+    margin: 0
+    padding: 0
+
+body
+    background: $color-background-1
+    color: $color-foreground
+
+form input
+    color: $color-background-1
+
+#search_nav
+    @include border-nav-top
+    z-index: 1
+    position: fixed
+    top: 0
+    background-color: $color-background-2
+    height: $height-nav
+    margin-bottom: 1%
+    margin-top: 2.7%
+    width: 100%
+
+#search_nav 
+    p, #input_search, #submit
+        text-align: center
+        padding: 19px 16px
+
+#search_nav 
+    #input_search, #submit
+        @include button-default
+
+#search-field
+    position: relative
+    width: 30%
+
+#search_nav #input_search
+    margin-left: .9%
+    color: $color-main-green
+    background-color: white
+    width: 97%
+
+#submit
+    position: absolute
+    right: 0
+    top: 0
+    padding: 5px, 8px
+
+h1
+    margin-top: 2.5em
+    margin-left: $margin-default
+
+// Posts --------------------------------------------------
+
+#posts
+    @include turn
+
+
+.post
+    @include turn
+    @include border-default
+    margin: $margin-default
+    overflow: hidden
+
+// Content
+
+.pcontent
+    background: $color-border
+    padding: 3%
+    overflow: hidden
+
+.pcontent img
+    @include border-round
+    float: right
+    bottom: 10em
+    height: auto
+    width: 25%
+    margin: 0 4%
+
+.pcontent h3, h4, .date
+    display: inline
+    left: 0
+
+.pcontent 
+    h4 
+        color: $color-tags
+        font-weight: $font-weight
+
+.pcontent 
+    .date 
+        padding-left: 1em
+        color: $color-info
+        font-weight: $font-weight
+
+.pcontent 
+    .content
+        margin: 1em 0 1em 0
+        color: $color-main-green
+        display: block
+
+// Menu / interaction
+
+.post 
+    .pmenu
+        width: 100%
+        border: solid 1px $color-border
+        background-color: $color-background-2
+        bottom: 0
+        padding: 1.4% 3% 1%
+
+.pmenu  
+    .vote 
+        @include border-default
+        bottom: 0
+        display: inline
+        padding: .5% 3% .3% 3%
+        background: $color-background-2
+    
+.vote 
+    img
+        height: .8em
+
+.pmenu  
+    .vote:first-of-type:hover
+        background-color: $color-hover-green
+        color: $color-background-1
+
+.pmenu  
+    .vote:last-of-type:hover
+        background-color: $color-hover-red
+        color: $color-background-1
+
+.pmenu  
+    .vote:hover 
+        img
+            @include image-invert
+
+.pmenu  
+    .vote:last-of-type img
+        transform: rotate(180deg)
+
+.hide
+    display: none
