@@ -3,6 +3,44 @@
   padding: 0;
 }
 
+#main_nav {
+  z-index: 1;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #222;
+  height: 2.9em;
+  margin-bottom: 1%;
+}
+
+#main_nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#main_nav li {
+  float: left;
+  list-style: none;
+}
+
+#main_nav li:last-of-type {
+  float: right;
+}
+
+#main_nav li {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#main_nav li a:hover {
+  background-color: #111;
+}
+
 body {
   background: black;
   color: #ffffff;
