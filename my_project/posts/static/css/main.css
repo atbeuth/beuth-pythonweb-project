@@ -5,7 +5,7 @@
 
 * {
   margin: 0;
-  paffing: 0;
+  padding: 0;
 }
 
 #main_nav {
@@ -14,7 +14,7 @@
   position: sticky;
   top: 0;
   background-color: #222;
-  height: 2.9em;
+  height: 47.5px;
   margin-bottom: 1%;
 }
 
@@ -34,7 +34,7 @@
   float: right;
 }
 
-#main_nav li {
+#main_nav li a {
   display: block;
   color: white;
   text-align: center;
@@ -42,7 +42,7 @@
   text-decoration: none;
 }
 
-#main_nav li a:hover {
+#main_nav li:hover {
   background-color: #111;
 }
 
@@ -59,7 +59,7 @@ form input {
   border-top: solid 0.1px white;
   z-index: 1;
   position: fixed;
-  top: 0;
+  top: 45.5px;
   background-color: #222;
   height: 2.9em;
   margin-bottom: 1%;
