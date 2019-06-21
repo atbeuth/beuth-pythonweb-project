@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+* {
+  margin: 0;
+  paffing: 0;
+}
+
 #main_nav {
   z-index: 1;
   position: -webkit-sticky;

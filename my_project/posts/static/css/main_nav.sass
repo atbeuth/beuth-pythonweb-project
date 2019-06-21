@@ -1,11 +1,15 @@
 @import variables
 
+*
+    margin: 0
+    padding: 0    
+
 #main_nav 
     z-index: 1
     position: sticky
     top: 0
     background-color: $color-background-2
-    height: 2.9em
+    height: 47.5px
     margin-bottom: 1%
 
 #main_nav 
@@ -27,13 +31,12 @@
 #main_nav 
     li 
         a
-        display: block
-        color: white
-        text-align: center
-        padding: 14px 16px
-        text-decoration: none
+            display: block
+            color: white
+            text-align: center
+            padding: 14px 16px
+            text-decoration: none
 
 #main_nav 
-    li 
-        a:hover 
-            background-color: $color-background-accent
+    li:hover
+        background-color: $color-background-accent
