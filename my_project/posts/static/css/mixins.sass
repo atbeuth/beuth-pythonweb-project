@@ -7,12 +7,11 @@
 @mixin border-round
     border-radius: 0.3em
 @mixin border-nav-top
-    border-top: solid 0.1px white
+    border-top: solid 0.1px 
 
 // buttons
 @mixin button-default
     padding: 4px
-    margin-top: 2%
     background-color: $color-main-green
     border: none
     border-radius: 10em
@@ -29,3 +28,7 @@
 // hacks
 @mixin turn
     transform: scaleY(-1)
+
+@mixin query ($width: 700px)
+    @media only screen and (max-width: $width)
+        @content

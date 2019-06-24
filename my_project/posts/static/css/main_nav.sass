@@ -1,42 +1,41 @@
 @import variables
 
 *
+    padding: 0
     margin: 0
-    padding: 0    
 
-#main_nav 
-    z-index: 1
-    position: sticky
-    top: 0
-    background-color: $color-background-2
-    height: 47.5px
-    margin-bottom: 1%
+nav 
+  position: sticky
+  top: 0
+  right: 0
+  display: flex
+  justify-content: space-between
+  flex-direction: row
+  align-items: center
+  height: 80px
+  background: $color-background-accent
+  z-index: 4
 
-#main_nav 
-    ul
-        list-style-type: none
-        margin: 0
-        padding: 0
-        overflow: hidden
-        // background-color: #333;
-#main_nav
-    li 
-        float: left
-        list-style: none
+ul 
+  display: flex
+  justify-content: space-around
+  flex-direction: row
+  align-items: center
 
-#main_nav 
-    li:last-of-type
-        float: right
+.nav-items 
+  list-style: none
 
-#main_nav 
-    li 
-        a
-            display: block
-            color: white
-            text-align: center
-            padding: 14px 16px
-            text-decoration: none
-
-#main_nav 
-    li:hover
-        background-color: $color-background-accent
+.nav-items li a 
+  text-decoration: none
+  color: white
+  &:hover
+      transition: color 0.2s ease-in-out
+      color: $color-main-green
+.nav-items li
+    list-style: none
+    margin-right: 2rem;
+   
+.logo img 
+  height: 50px
+  width: auto
+  margin-left: 2rem 

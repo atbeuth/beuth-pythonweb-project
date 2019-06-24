@@ -8,25 +8,27 @@ form input {
 }
 
 #search_nav {
-  border-top: solid 0.1px white;
   z-index: 1;
   position: fixed;
-  top: 45.5px;
+  top: 80px;
   background-color: #222;
-  height: 2.9em;
-  margin-bottom: 1%;
-  margin-top: 2.7%;
+  height: 55px;
   width: 100%;
 }
 
 #search_nav p, #search_nav #input_search, #search_nav #submit {
   text-align: center;
-  padding: 19px 16px;
+}
+
+#search_nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: middle;
 }
 
 #search_nav #input_search, #search_nav #submit {
   padding: 4px;
-  margin-top: 2%;
   background-color: #4CAF50;
   border: none;
   border-radius: 10em;
@@ -40,11 +42,18 @@ form input {
 
 #search-field {
   position: relative;
-  width: 30%;
+  width: 35%;
+  margin: auto 0 auto 2rem;
+}
+
+@media only screen and (max-width: 700px) {
+  #search-field {
+    width: 80%;
+    margin: auto;
+  }
 }
 
 #search_nav #input_search {
-  margin-left: .9%;
   color: #4CAF50;
   background-color: white;
   width: 97%;
@@ -52,14 +61,15 @@ form input {
 
 #submit {
   position: absolute;
-  right: 0;
+  right: -10px;
   top: 0;
-  padding: 5px, 8px;
+  padding: 5px 8px;
+  cursor: pointer;
 }
 
 h1 {
   margin-top: 2.5em;
-  margin-left: 2%;
+  margin-left: 2rem;
 }
 
 #posts {
@@ -72,7 +82,7 @@ h1 {
           transform: scaleY(-1);
   border: solid 1px #2b2b2b;
   border-radius: 0.3em;
-  margin: 2%;
+  margin: 2rem;
   overflow: hidden;
 }
 

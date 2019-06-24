@@ -7,36 +7,36 @@
 {% block content %}
 
 <link href="{% static 'css/posts.css'%}" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 <script src="{% static "js/filter_posts.js" %}"></script>
 
 <form id="search_nav">
-<div id="search-field" >
-  <input id="input_search" type="text" name="fname">
-  <input id="submit" type="submit" value="search">
-  </div>
+    <div id="search-field">
+        <input id="input_search" type="text" name="fname">
+        <input id="submit" type="submit" value="search">
+    </div>
 </form>
 
 <h1>All Posts</h1>
 
 <div id="posts">
-{% for post in all_posts %}
+    {% for post in all_posts %}
 
-<div class="post">
-    <div class="pcontent">
-        <h3>Post-ID: {{ post.id }}</h3>
-        <p class="date">Puplished on: {{ post.timestamp }}</p><br>
-        <h4 id="tags">Tags: {{ post.tags }}</h4><br>
-        <img src="{{ post.image_url.url }}" alt="TestBild"  width="100">
-        <p class="content">{{ post.content }}</p>
+    <div class="post">
+        <div class="pcontent">
+            <h3>Post-ID: {{ post.id }}</h3>
+            <p class="date">Puplished on: {{ post.timestamp }}</p><br>
+            <h4 id="tags">Tags: {{ post.tags }}</h4><br>
+            <img src="{{ post.image_url.url }}" alt="TestBild" width="100">
+            <p class="content">{{ post.content }}</p>
+        </div>
+        <div class="pmenu">
+            <p class="vote"><img src="{% static 'icons/vote.png'%}">{{ post.upvotes}}</p>
+            <p class="vote"><img src="{% static 'icons/vote.png'%}">{{ post.downvotes}}</p>
+        </div>
     </div>
-    <div class="pmenu">
-        <p class="vote"><img src="{% static 'icons/vote.png'%}">{{ post.upvotes}}</p>
-        <p class="vote"><img src="{% static 'icons/vote.png'%}">{{ post.downvotes}}</p>
-    </div>
-</div>
 
-{% endfor %}
+    {% endfor %}
 </div>
 </table>
 {% endblock content %}
-
