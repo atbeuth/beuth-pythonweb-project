@@ -4,10 +4,12 @@
 @mixin border-default
     border: solid 1px $color-border
     border-radius: 0.3em
+    @content
 @mixin border-round
     border-radius: 0.3em
 @mixin border-nav-top
-    border-top: solid 0.1px 
+    border-top: solid 0.1px
+ 
 
 @mixin background-settings
     background: $color-background-1

@@ -170,7 +170,7 @@ h1 {
   overflow: hidden;
 }
 
-.pcontent img {
+.pcontent > img {
   border-radius: 0.3em;
   float: right;
   bottom: 10em;
