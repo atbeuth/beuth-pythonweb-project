@@ -1,24 +1,65 @@
+{% extends "home.html" %}
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/postDetail.css'%}" type="text/css">
 </head>
+
 <body>
-{% extends "home.html" %}
-{% block title %}All Posts{% endblock title %}
-{% block content %}
-<h1>Post Detail</h1>
-<table class="post">
- <tr><td>ID:</td><td>{{ post.id }}</td></tr>
- <tr><td>IMAGE_URL:</td><td>{{ post.image_url.url }}</td></tr>
- <tr><td>Content:</td><td>{{ post.content }}</td></tr>
- <tr><td>Timestamp:</td><td>{{ post.timestamp }}</td></tr>
- <tr><td>Upvotes:</td><td>{{ post.upvotes }}</td></tr>
- <tr><td>Downvotes:</td><td>{{ post.downvotes }}</td></tr>
-</table>
-<p><a href="../show">Back to post list</a></p>
-{% endblock content %}
+
+    {% block title %}All Posts{% endblock title %}
+    {% block content %}
+    <h1>Post Detail</h1>
+    <div class="post">
+        <div class="pcontent">
+            <h3>Post-ID: {{ post.id }}</h3>
+            <p class="date">Puplished on: {{ post.timestamp }}</p><br>
+            <h4 id="tags">Tags: {{ post.tags }}</h4><br>
+            <img id="pimg" src="{{ post.image_url.url }}" alt="TestBild" width="100">
+            <p class="content">{{ post.content }}</p>
+            <div class="pmenu">
+                <span class="vote"><img src="{% static 'icons/vote.png'%}">{{ post.upvotes}}</span>
+                <span class="vote"><img src="{% static 'icons/vote.png'%}">{{ post.downvotes}}</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!--
+        <tr>
+            <td>ID:</td>
+            <td>{{ post.id }}</td>
+        </tr>
+        <tr>
+            <td>IMAGE_URL:</td>
+            <td>{{ post.image_url.url }}</td>
+        </tr>
+        <tr>
+            <td>Content:</td>
+            <td>{{ post.content }}</td>
+        </tr>
+        <tr>
+            <td>Timestamp:</td>
+            <td>{{ post.timestamp }}</td>
+        </tr>
+        <tr>
+            <td>Upvotes:</td>
+            <td>{{ post.upvotes }}</td>
+        </tr>
+        <tr>
+            <td>Downvotes:</td>
+            <td>{{ post.downvotes }}</td>
+        </tr>
+    </table>
+    -->
+    <p id="back"><a href="../show">Back</a></p>
+    {% endblock content %}
 
 </body>
+
 </html>

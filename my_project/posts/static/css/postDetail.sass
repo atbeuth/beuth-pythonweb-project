@@ -1,0 +1,103 @@
+@import variables 
+@import mixins
+
+h1
+    margin-top: 2.5em;
+    margin-left: 2rem;
+
+.post
+    border: solid 1px #2b2b2b;
+    border-radius: 0.3em;
+    margin: 2rem;
+    overflow: hidden;
+
+.pcontent
+    background: #2b2b2b
+    padding: 3%
+    overflow: hidden
+    height: 50vh
+    position: relative
+    @include query(700px)
+        height: 65vh
+
+.pcontent h3, h4, .date 
+    display: inline
+    left: 0
+
+.pcontent .date 
+    padding-left: 1em;
+    color: gray;
+    font-weight: 100;
+.pcontent h4 
+    color: #00b3ff;
+    font-weight: 100;
+
+.pcontent .content 
+    margin: 1em 0 1em 0;
+    color: #4CAF50;
+    display: block;
+.post .pmenu 
+    width: 100%;
+    border: solid 1px #2b2b2b;
+    background-color: #222;
+    bottom: 0
+    left: 0
+    padding: 1.4% 3% 1%;
+    position: absolute
+
+#back 
+    width: 100%
+    text-align: center
+    
+    a 
+        text-decoration: none
+        color: rgb(250,250,250)
+
+.pcontent
+    >#pimg
+        width: 50%
+        border-radius: 0.3em
+        float: right
+        bottom: 10em
+        height: auto
+        margin: 0 0 0 4%
+        max-height: 85%
+        @include query(700px)
+            max-height: initial
+            width: 100%
+            margin-top: 2rem
+
+
+body
+    @include background-settings
+
+.pmenu  
+    .vote:first-of-type:hover
+        background-color: $color-hover-green
+        color: $color-background-1
+
+.pmenu  
+    .vote:last-of-type:hover
+        background-color: $color-hover-red
+        color: $color-background-1
+
+.pmenu  
+    .vote:hover 
+        img
+            @include image-invert
+
+.pmenu  
+    .vote:last-of-type img
+        transform: rotate(180deg)
+
+.pmenu  
+    .vote 
+        @include border-default
+        bottom: 0
+        display: inline
+        padding: .5% 3% .3% 3%
+        background: $color-background-2
+    
+.vote 
+    img
+        height: .8em

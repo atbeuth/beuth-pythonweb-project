@@ -9,6 +9,10 @@
 @mixin border-nav-top
     border-top: solid 0.1px 
 
+@mixin background-settings
+    background: $color-background-1
+    color: $color-foreground
+
 // buttons
 @mixin button-default
     padding: 4px
@@ -25,10 +29,11 @@
 @mixin image-invert
     filter: invert(1)
 
+@mixin query ($width: 700px)
+    @media only screen and (max-width: $width)
+        @content
+
 // hacks
 @mixin turn
     transform: scaleY(-1)
 
-@mixin query ($width: 700px)
-    @media only screen and (max-width: $width)
-        @content

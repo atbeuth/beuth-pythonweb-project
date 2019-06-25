@@ -1,0 +1,124 @@
+h1 {
+  margin-top: 2.5em;
+  margin-left: 2rem;
+}
+
+.post {
+  border: solid 1px #2b2b2b;
+  border-radius: 0.3em;
+  margin: 2rem;
+  overflow: hidden;
+}
+
+.pcontent {
+  background: #2b2b2b;
+  padding: 3%;
+  overflow: hidden;
+  height: 50vh;
+  position: relative;
+}
+
+@media only screen and (max-width: 700px) {
+  .pcontent {
+    height: 65vh;
+  }
+}
+
+.pcontent h3, h4, .date {
+  display: inline;
+  left: 0;
+}
+
+.pcontent .date {
+  padding-left: 1em;
+  color: gray;
+  font-weight: 100;
+}
+
+.pcontent h4 {
+  color: #00b3ff;
+  font-weight: 100;
+}
+
+.pcontent .content {
+  margin: 1em 0 1em 0;
+  color: #4CAF50;
+  display: block;
+}
+
+.post .pmenu {
+  width: 100%;
+  border: solid 1px #2b2b2b;
+  background-color: #222;
+  bottom: 0;
+  left: 0;
+  padding: 1.4% 3% 1%;
+  position: absolute;
+}
+
+#back {
+  width: 100%;
+  text-align: center;
+}
+
+#back a {
+  text-decoration: none;
+  color: #fafafa;
+}
+
+.pcontent > #pimg {
+  width: 50%;
+  border-radius: 0.3em;
+  float: right;
+  bottom: 10em;
+  height: auto;
+  margin: 0 0 0 4%;
+  max-height: 85%;
+}
+
+@media only screen and (max-width: 700px) {
+  .pcontent > #pimg {
+    max-height: initial;
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+
+body {
+  background: black;
+  color: #ffffff;
+}
+
+.pmenu .vote:first-of-type:hover {
+  background-color: lime;
+  color: black;
+}
+
+.pmenu .vote:last-of-type:hover {
+  background-color: red;
+  color: black;
+}
+
+.pmenu .vote:hover img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.pmenu .vote:last-of-type img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.pmenu .vote {
+  border: solid 1px #2b2b2b;
+  border-radius: 0.3em;
+  bottom: 0;
+  display: inline;
+  padding: .5% 3% .3% 3%;
+  background: #222;
+}
+
+.vote img {
+  height: .8em;
+}
+/*# sourceMappingURL=postDetail.css.map */

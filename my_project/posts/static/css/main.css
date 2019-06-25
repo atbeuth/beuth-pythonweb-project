@@ -51,7 +51,6 @@ ul {
 }
 
 .nav-items {
-  width: 43%;
   list-style: none;
 }
 
@@ -68,6 +67,7 @@ ul {
 
 .nav-items li {
   list-style: none;
+  margin-right: 2rem;
 }
 
 .logo img {
@@ -120,8 +120,15 @@ form input {
 
 #search-field {
   position: relative;
-  width: 40%;
+  width: 35%;
   margin: auto 0 auto 2rem;
+}
+
+@media only screen and (max-width: 700px) {
+  #search-field {
+    width: 80%;
+    margin: auto;
+  }
 }
 
 #search_nav #input_search {
@@ -135,6 +142,7 @@ form input {
   right: -10px;
   top: 0;
   padding: 5px 8px;
+  cursor: pointer;
 }
 
 h1 {
