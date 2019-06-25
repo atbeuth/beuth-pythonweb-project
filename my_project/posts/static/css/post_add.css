@@ -38,6 +38,10 @@ button:hover {
   background-color: #4CAF50;
 }
 
+p:nth-last-child(2) {
+  width: 20%;
+}
+
 textarea {
   border-radius: 15px;
   background-color: #2b2b2b;
