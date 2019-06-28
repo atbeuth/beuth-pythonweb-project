@@ -1,3 +1,7 @@
+* {
+  color: white;
+}
+
 body {
   background: black;
   color: #ffffff;
@@ -167,5 +171,9 @@ h1 {
 
 .hide {
   display: none;
+}
+
+a {
+  text-decoration: none;
 }
 /*# sourceMappingURL=posts.css.map */

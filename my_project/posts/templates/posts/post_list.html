@@ -23,7 +23,7 @@
 <div id="posts">
     {% for post in all_posts %}
 
-    <div class="post">
+    <div class="post" ><a href="http://127.0.0.1:8000/posts/show/{{ post.id }}">
         <div class="pcontent">
             <h3>Post-ID: {{ post.id }}</h3>
             <p class="date">Puplished on: {{ post.timestamp }}</p><br>
@@ -35,7 +35,7 @@
             <p class="vote"><img src="{% static 'icons/vote.png'%}">{{ post.upvotes}}</p>
             <p class="vote"><img src="{% static 'icons/vote.png'%}">{{ post.downvotes}}</p>
         </div>
-    </div>
+    </a></div>
 
     {% endfor %}
 </div>

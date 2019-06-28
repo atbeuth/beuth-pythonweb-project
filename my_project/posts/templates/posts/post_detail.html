@@ -30,7 +30,7 @@
             </div>
         </div>
 
-    </div>
+    </div><br>
 
     <!--
         <tr>
@@ -61,24 +61,26 @@
     -->
     <p id="back"><a href="../show">Back</a></p>
     
+   <div id="posts">
+    {% for post in all_posts %}
 
-    {% for comments in all_posts %}
-    <!--{% if comments.parent_id == post.id %}-->
     <div class="post">
         <div class="pcontent">
-            <h3>Post-ID: {{ comments.id }}</h3>
-            <p class="date">Puplished on: {{ comments.timestamp }}</p><br>
-            <h4 id="tags">Tags: {{ comments.tags }}</h4><br>
-            <img src="{{ comments.image_url.url }}" alt="TestBild" width="100">
-            <p class="content">{{ comments.content }}</p>
+            <h3>Post-ID: {{ post.id }}</h3>
+            <p class="date">Puplished on: {{ post.timestamp }}</p><br>
+            <h4 id="tags">Tags: {{ post.tags }}</h4><br>
+            <img src="{{ post.image_url.url }}" alt="TestBild" width="100">
+            <p class="content">{{ post.content }}</p>
         </div>
         <div class="pmenu">
             <p class="vote"><img src="{% static 'icons/vote.png'%}">{{ post.upvotes}}</p>
             <p class="vote"><img src="{% static 'icons/vote.png'%}">{{ post.downvotes}}</p>
         </div>
     </div>
-    {% endif %}
+
     {% endfor %}
+</div>
+    
 {% endblock content %}
 </body>
 
