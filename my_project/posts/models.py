@@ -3,8 +3,8 @@ from django.db import models
 # Create your models here.
 class Post(models.Model):
     #image_url = models.ImageField(upload_to ='media/', default = 'media/assets/no_pic.png')
-    image_url = models.ImageField(upload_to ='media/')
-    #parent_id = models.TextField(max_length=5, default = "")
+    image_url = models.ImageField(upload_to ='media/', null=True)
+    parent = models.ForeignKey('self', on_delete=models.CASCADE,  null=True)  #TextField(max_length=5, default = "")
     content = models.TextField(max_length=1000)
     tags = models.TextField(max_length=200)
     timestamp = models.DateTimeField(auto_now=True)

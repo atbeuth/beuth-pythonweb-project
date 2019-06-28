@@ -62,7 +62,21 @@
     <p id="back"><a href="../show">Back</a></p>
 <br>
     <h1>Comments</h1>
-    
+    <br>
+    <form methode="POST">
+        {% csrf_token %}
+        Image
+        <input type="file" name="file"><br>
+        Text
+        <input type="text" name="text">
+        Tags
+        <input type="text" name="tags">
+        Tags
+        <input type="hidden" name="parent_id" value="{{ post.id }}">
+        <button type="submit">Submit comment</button>
+    </form>
+
+
    <div id="posts">
     {% for post in all_posts %}
 

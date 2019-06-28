@@ -8,7 +8,8 @@ from .views import *
 
 urlpatterns = [
  path('show', PostListView.as_view(), name='all-posts'),
- path('show/<int:pk>', PostDetailView.as_view(), name='postdetail'),
+ #path('show/<int:pk>', PostDetailView.as_view(), name='postdetail'),
+ path('show/<int:pk>', add_comment, name='postdetail'),
  path('add', views.add_post, name='post-add'),
  path('success', success, name = 'success'), 
 ]
