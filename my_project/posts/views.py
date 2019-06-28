@@ -19,6 +19,7 @@ self).get_context_data(**kwargs)
 
 class PostDetailView(DetailView):
     model = Post
+    context_object_name = "all_posts"
     context_object_name = "post"
     def get_context_data(self, **kwargs):
         context = super(PostDetailView,
