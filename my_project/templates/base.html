@@ -36,15 +36,19 @@
   </nav>
   {% endblock %}
   <main>
-  {% block ad %}
-      <div class="ad">
-        <h2>Advertisement</h2>
-      </div>
-      {% endblock %}
+    {% block ad %}
+    <div class="ad">
+      <a></a><img class="ad-img" src="{% static 'icons/add3.png'%}">
+      <a href="https://www.tokyobike.de/?area=bikes" target="_blank"><img class="ad-img"
+          src="{% static 'icons/ad.png'%}"></a>
+      <a href="https://www.maccosmetics.de/products/13854/produkte/make-up/lippen/lippenstift" target="_blank">
+        <img class="ad-img" src="{% static 'icons/ad2.png'%}"></a>
+    </div>
+    {% endblock %}
     {% block content %}
-      
+
     {% endblock %}
   </main>
-</body> 
+</body>
 
 </html>
