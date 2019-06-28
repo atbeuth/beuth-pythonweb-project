@@ -56,4 +56,8 @@ textarea {
     width: 100%;
   }
 }
+
+p:first-of-type textarea {
+  height: 20px;
+}
 /*# sourceMappingURL=post_add.css.map */

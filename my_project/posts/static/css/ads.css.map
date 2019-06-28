@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,GAAG,CAAC;EACA,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,gBAAgB,EAAE,IAAI;CAAG;;AAC7B,AAAA,GAAG,CAAC,EAAE,CAAC;EACH,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,gBAAgB,EAAE,IAAI;CAAG",
+    "sources": [
+        "ads.sass",
+        "variables.sass",
+        "mixins.sass",
+        "variables.sass"
+    ],
+    "names": [],
+    "file": "ads.css"
+}

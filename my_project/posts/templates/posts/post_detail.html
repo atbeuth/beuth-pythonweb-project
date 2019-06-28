@@ -8,6 +8,8 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="{% static 'css/postDetail.css'%}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/ads.css'%}" type="text/css">
+
 </head>
 
 <body>
@@ -58,8 +60,26 @@
     </table>
     -->
     <p id="back"><a href="../show">Back</a></p>
-    {% endblock content %}
+    
 
+    {% for comments in all_posts %}
+    <!--{% if comments.parent_id == post.id %}-->
+    <div class="post">
+        <div class="pcontent">
+            <h3>Post-ID: {{ comments.id }}</h3>
+            <p class="date">Puplished on: {{ comments.timestamp }}</p><br>
+            <h4 id="tags">Tags: {{ comments.tags }}</h4><br>
+            <img src="{{ comments.image_url.url }}" alt="TestBild" width="100">
+            <p class="content">{{ comments.content }}</p>
+        </div>
+        <div class="pmenu">
+            <p class="vote"><img src="{% static 'icons/vote.png'%}">{{ post.upvotes}}</p>
+            <p class="vote"><img src="{% static 'icons/vote.png'%}">{{ post.downvotes}}</p>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+{% endblock content %}
 </body>
 
 </html>

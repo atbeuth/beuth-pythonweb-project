@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{% static 'css/postDetail.css'%}" type="text/css">
   <link rel="stylesheet" href="{% static 'css/post_add.css'%}" type="text/css">
+  <link rel="stylesheet" href="{% static 'css/ads.css'%}" type="text/css">
+
 </head>
 
 <body>
@@ -34,9 +36,15 @@
   </nav>
   {% endblock %}
   <main>
+  {% block ad %}
+      <div class="ad">
+        <h2>Advertisement</h2>
+      </div>
+      {% endblock %}
     {% block content %}
+      
     {% endblock %}
   </main>
-</body>
+</body> 
 
 </html>

@@ -74,6 +74,12 @@ ul {
   height: 50px;
   width: auto;
   margin-left: 2rem;
+  /* Advertisements */
+}
+
+.logo img .ad {
+  height: 100px;
+  background-color: blue;
 }
 
 body {
