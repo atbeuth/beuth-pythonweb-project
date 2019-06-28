@@ -74,12 +74,10 @@ ul {
   height: 50px;
   width: auto;
   margin-left: 2rem;
-  /* Advertisements */
 }
 
-.logo img .ad {
-  height: 100px;
-  background-color: blue;
+* {
+  color: white;
 }
 
 body {
@@ -251,5 +249,21 @@ h1 {
 
 .hide {
   display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.ad {
+  color: black;
+  height: 100px;
+  background-color: blue;
+}
+
+.ad h2 {
+  color: black;
+  height: 100px;
+  background-color: light-blue;
 }
 /*# sourceMappingURL=main.css.map */
